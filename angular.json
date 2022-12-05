@@ -5,6 +5,7 @@
     "api-interfaces": "libs/api-interfaces",
     "dogs": "apps/dogs",
     "dogs-e2e": "apps/dogs-e2e",
+    "dogs-feature-dogs": "libs/dogs/feature-dogs",
     "dogs-react": "apps/dogs-react",
     "dogs-react-e2e": "apps/dogs-react-e2e"
   }

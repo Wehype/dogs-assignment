@@ -1,0 +1,44 @@
+<dogs-card-skeleton *ngIf="(loading$ | async) === true"></dogs-card-skeleton>
+<div class="d-flex justify-content-end">
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<mat-card
+  [hidden]="(loading$ | async) === true"
+  *ngIf="dogDetails$ | async as dog"
+  class="dog-detail-card"
+>
+  <mat-card-header class="w-100">
+    <img
+      loading="lazy"
+      mat-card-avatar
+      [src]="dog?.photoUrl"
+      [alt]="'Photo of ' + dog?.name"
+    />
+    <mat-card-title
+      class="d-flex align-items-center justify-content-between w-100"
+    >
+      <div>
+        <span> {{ dog?.name }} </span>
+        <span class="fs-6 text-muted">· {{ dog?.age }}y</span>
+      </div>
+      <div class="d-flex">
+        <mat-icon color="accent">{{ dog?.gender }}</mat-icon>
+      </div>
+    </mat-card-title>
+    <mat-card-subtitle>{{ dog?.breed }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    height="451"
+    loading="lazy"
+    mat-card-image
+    [src]="dog?.photoUrl"
+    [alt]="'Photo of ' + dog?.name"
+  />
+  <span>
+    {{ dog?.name }} is a {{ dog?.age }} year old {{ dog?.gender }}
+    {{ dog?.breed }} dog</span
+  >
+  <mat-card-content> </mat-card-content>
+</mat-card>

@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/dogs/feature-dogs/src",
+  "prefix": "dogs",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/dogs/feature-dogs"],
+      "options": {
+        "jestConfig": "libs/dogs/feature-dogs/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/dogs/feature-dogs/**/*.ts",
+          "libs/dogs/feature-dogs/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
