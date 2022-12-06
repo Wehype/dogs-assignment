@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dogs/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@dogs/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@dogs/dogs/feature-dogs": ["libs/dogs/feature-dogs/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

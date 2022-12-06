@@ -1,0 +1,7 @@
+<div class="row g-5" id="dogs-list">
+  <div class="col-4" *ngFor="let dog of dogs">
+    <dogs-item [dog]="dog"></dogs-item>
+  </div>
+
+  <span *ngIf="!dogs?.length"> No dogs found, please modify your search </span>
+</div>

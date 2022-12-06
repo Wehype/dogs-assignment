@@ -1,0 +1,31 @@
+<div class="container" id="dogs-container">
+  <div class="pt-4">
+    <mat-form-field>
+      <mat-label>Search dog</mat-label>
+      <input
+        id="search-input"
+        [formControl]="searchForm"
+        matInput
+        type="text"
+      />
+      <button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="resetSearchForm()"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <div *ngIf="(loading$ | async) === true" class="row g-5">
+      <div class="col-4" *ngFor="let skeleton of [].constructor(21)">
+        <dogs-card-skeleton></dogs-card-skeleton>
+      </div>
+    </div>
+    <dogs-list
+      [hidden]="(loading$ | async) === true"
+      [dogs]="filteredDogs$ | async"
+    >
+    </dogs-list>
+  </div>
+</div>
