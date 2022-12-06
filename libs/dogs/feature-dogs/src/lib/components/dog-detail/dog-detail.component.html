@@ -1,6 +1,6 @@
 <dogs-card-skeleton *ngIf="(loading$ | async) === true"></dogs-card-skeleton>
-<div class="d-flex justify-content-end">
-  <button mat-icon-button mat-dialog-close>
+<div id="detail-modal" class="d-flex justify-content-end">
+  <button id="close-button" mat-icon-button mat-dialog-close>
     <mat-icon>close</mat-icon>
   </button>
 </div>

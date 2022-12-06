@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'dogs-card-skeleton',
@@ -6,8 +6,4 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./card-skeleton.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardSkeletonComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class CardSkeletonComponent {}

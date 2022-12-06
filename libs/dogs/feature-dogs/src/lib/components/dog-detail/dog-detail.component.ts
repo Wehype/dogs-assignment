@@ -1,5 +1,5 @@
 import { BehaviorSubject, Observable, switchMap, tap } from 'rxjs';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
 import { Dog } from '../../models/dog';

@@ -1,8 +1,13 @@
-<div class="container">
+<div class="container" id="dogs-container">
   <div class="pt-4">
     <mat-form-field>
       <mat-label>Search dog</mat-label>
-      <input [formControl]="searchForm" matInput type="text" />
+      <input
+        id="search-input"
+        [formControl]="searchForm"
+        matInput
+        type="text"
+      />
       <button
         matSuffix
         mat-icon-button
